@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../images/logo-mesto.svg";
 import { Route, Routes, Link } from "react-router-dom";
 
-function Header({ email, onLogout }) {
+function Header({ email, onSignOut }) {
   return (
     <header className="header">
       <img className="header__logo" src={logo} alt="Логотип место" />
@@ -31,7 +31,7 @@ function Header({ email, onLogout }) {
               <Link
                 to="/sign-in"
                 className="header__link"
-                onClick={onLogout}
+                onClick={onSignOut}
                 style={{ color: `rgb(169, 169, 169)` }}
               >
                 Выйти

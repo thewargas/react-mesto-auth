@@ -63,6 +63,7 @@ function App() {
       .catch((error) => {
         console.log(error);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -271,7 +272,7 @@ function App() {
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
-      <Header email={email} onLogout={handleLogout} />
+      <Header email={email} onSignOut={handleLogout} />
       <Routes>
         <Route
           path="/"
