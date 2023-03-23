@@ -30,7 +30,7 @@ function PopupWithForm({
         <form
           className={`popup__form popup__form_type_${name}`}
           action="#"
-          name="popup-form-profile"
+          name={`popup-form-${name}`}
           onSubmit={onSubmit}
           ref={formRef}
           noValidate

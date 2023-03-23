@@ -67,8 +67,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const close = (e) => {
-      if (e.keyCode === 27) {
+    const close = (evt) => {
+      if (evt.key === "Escape") {
         closeAllPopups();
       }
     };
@@ -162,7 +162,6 @@ function App() {
       })
       .finally(() => {
         setLoading(false);
-        closeAllPopups();
       });
   }
 
@@ -179,7 +178,6 @@ function App() {
       })
       .finally(() => {
         setLoading(false);
-        closeAllPopups();
       });
   }
 
@@ -189,13 +187,13 @@ function App() {
       .changeAvatar(input)
       .then((data) => {
         setCurrentUser(data);
+        closeAllPopups();
       })
       .catch((error) => {
         console.log(error);
       })
       .finally(() => {
         setLoading(false);
-        closeAllPopups();
         clearInput();
       });
   }
@@ -213,7 +211,6 @@ function App() {
       })
       .finally(() => {
         setLoading(false);
-        closeAllPopups();
         clearInputs();
       });
   }

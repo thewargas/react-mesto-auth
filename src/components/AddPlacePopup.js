@@ -19,11 +19,6 @@ function AddPlacePopup({
     urlRef.current.value = "";
   }, [isOpen]);
 
-  function clearInputs() {
-    nameRef.current.value = "";
-    urlRef.current.value = "";
-  }
-
   function handleChangeInputs(e) {
     onValidation(e);
   }
@@ -31,13 +26,10 @@ function AddPlacePopup({
   function handleSubmit(e) {
     e.preventDefault();
 
-    onAddPlace(
-      {
-        name: nameRef.current.value,
-        link: urlRef.current.value,
-      },
-      clearInputs
-    );
+    onAddPlace({
+      name: nameRef.current.value,
+      link: urlRef.current.value,
+    });
   }
 
   return (

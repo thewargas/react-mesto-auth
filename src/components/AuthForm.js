@@ -54,6 +54,7 @@ function AuthForm({
           placeholder="Email"
           name="email"
           onChange={handleChangeEmail}
+          value={email || ""}
           required
         />
         <span
@@ -71,6 +72,7 @@ function AuthForm({
           placeholder="Пароль"
           name="password"
           onChange={handleChangePassword}
+          value={password || ""}
           minLength="3"
           required
         />
